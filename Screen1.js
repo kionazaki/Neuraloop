@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
+import { sayIt, getAvailableVoices } from "./sayIt";
 
 const Screen1 = ({ navigation }) => {
     return (
@@ -11,8 +12,13 @@ const Screen1 = ({ navigation }) => {
             />
 
             <Button
+                title="getAvailableVoices"
+                onPress={ getAvailableVoices }
+            />
+
+            <Button
                 title="Алерт"
-                onPress={() => alert('Screen2')}
+                onPress={ sayIt }
             />
 
             <Button
@@ -24,3 +30,5 @@ const Screen1 = ({ navigation }) => {
 };
 
 export default Screen1;
+
+
